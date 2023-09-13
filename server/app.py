@@ -4,7 +4,7 @@ from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-from models import db # import your models here!
+from models import db, Park, Animal
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
@@ -17,6 +17,7 @@ db.init_app(app)
 
 @app.get('/')
 def index():
+    import ipdb; ipdb.set_trace()
     return "Hello world"
 
 # write your routes here!
